@@ -1,8 +1,12 @@
+const log = require('./log')
 const fs = require('fs')
 const { exec } = require('child_process')
 
 const handleIOError = err => {
-  if (err) throw err
+  if (err) {
+    log.error('IO Error: ' + err)
+    throw err
+  }
 }
 
 const mkdir = dir =>
@@ -23,10 +27,15 @@ const createFile = (path, content) => {
 const createJsFile = (dir, name, content) =>
   createFile(`${dir}/${name}.js`, content)
 
+
+const exists = (path) =>
+  fs.existsSync(path)
+
 module.exports = {
   mkdir,
   touch,
   echo,
+  exists,
   createFile,
   createJsFile
 }
