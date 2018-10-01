@@ -1,9 +1,9 @@
-# Customer Management CLI
+# React CLI
 
-Command line interface fir managing customers. Uses Mongoose, COmmander.js and Inquirer.js
+Command line interface for generating React components. Uses Commander.js and Colors.js
 
 ### Version
-1.0.0
+0.0.1
 
 ## Usage
 
@@ -23,41 +23,27 @@ $ npm link
 
 ### Commands
 
-List Customers (list or l)
+Generate Component
 ```sh
-$ client-cli list
+$ react-cli generate component [PATH_TO_COMPONENT]
 ```
 
-Find Customers (find or f)
+or short
+
 ```sh
-$ client-cli find [NAME]
+$ react-cli g c [PATH_TO_COMPONENT]
 ```
 
-Add Customer (add or a)
-```sh
-$ client-cli add
-```
-
-Update Customer (update or u)
-```sh
-$ client-cli update [_ID]
-```
-
-Remove Customer (remove or r)
-```sh
-$ client-cli remove [_ID]
-```
 
 ## App Info
 
 ### Author
 
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
+Marko Rusic
 
 ### Version
 
-1.0.0
+0.0.1
 
 ### License
 
