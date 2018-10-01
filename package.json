@@ -4,7 +4,7 @@
   "description": "React cli generator",
   "main": "index.js",
   "preferGlobal": true,
-  "bin": "./commands.js",
+  "bin": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
