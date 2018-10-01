@@ -25,13 +25,13 @@ $ npm link
 
 Generate Component
 ```sh
-$ react-cli generate component [PATH_TO_COMPONENT]
+$ react-cli generate component [NAME]
 ```
 
 or short
 
 ```sh
-$ react-cli g c [PATH_TO_COMPONENT]
+$ react-cli g c [NAME]
 ```
 
 
