@@ -6,7 +6,7 @@ const handleIOError = err => {
 }
 
 const mkdir = dir =>
-  exec('mkdir -p ' + dir, handleIOError)
+  exec(`mkdir -p ${dir}`, handleIOError)
 
 const touch = fileName =>
   exec(`touch ${fileName}`, handleIOError)
@@ -19,9 +19,15 @@ const createFile = (path, content) => {
   echo(path, content)
 }
 
+const createJsFile = (dir, name, content) => {
+  // mkdir(dir)
+  createFile(`${dir}/${name}.js`, content)
+}
+
 module.exports = {
   mkdir,
   touch,
   echo,
-  createFile
+  createFile,
+  createJsFile
 }

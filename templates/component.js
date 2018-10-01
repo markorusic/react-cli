@@ -7,7 +7,7 @@ const ${name} = ({ children }) => (
 	</div>
 )
 
-NavLink.propTypes = {
+${name}.propTypes = {
   children: PropTypes.any
 }
 
@@ -15,6 +15,26 @@ export default ${name}
 
 `
 
+const index = ({ name }) => `import ${name} from './${name}'
+import styles from './styles'
+
+export {
+  ${name},
+  styles
+}
+`
+
+const styles = () => `export default {
+
+}
+`
+
+const test = ({ name }) => `
+`
+
 module.exports = {
-  rcfp
+  rcfp,
+  index,
+  styles,
+  test
 }
