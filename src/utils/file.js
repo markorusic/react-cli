@@ -12,17 +12,16 @@ const touch = fileName =>
   exec(`touch ${fileName}`, handleIOError)
 
 const echo = (path, content) =>
-  fs.writeFileSync(`./${path}`, content, handleIOError)
+  fs.writeFileSync(`${path}`, content, handleIOError)
 
 const createFile = (path, content) => {
-  touch(path)
-  echo(path, content)
+  const absolutePath = [process.cwd(), path].join('/')
+  touch(absolutePath)
+  echo(absolutePath, content)
 }
 
-const createJsFile = (dir, name, content) => {
-  // mkdir(dir)
+const createJsFile = (dir, name, content) =>
   createFile(`${dir}/${name}.js`, content)
-}
 
 module.exports = {
   mkdir,
